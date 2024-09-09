@@ -1,0 +1,77 @@
+body {
+    min-height: 100vh; /* Adjust to ensure the body height is appropriate for viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.container {
+    max-width: 800px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container and add some margin */
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for better appearance */
+}
+
+.full-width-button {
+    width: 100%; 
+}  
+
+form {
+    padding: 20px; /* Increase padding for better visual appearance */
+    border: 1px solid #454545;
+    border-radius: 8px; /* Add rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for better appearance */
+    background-color: #f9f9f9; /* Background color for the form */
+}
+
+button {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for buttons */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+input, select {
+    border: 1px solid #000000;
+    border-radius: 4px; /* Add rounded corners to input and select */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for better appearance */
+    padding: 8px; /* Add padding inside input and select */
+    width: 100%; /* Make input and select full width */
+}
+
+table {
+    width: 100%; /* Ensure the table takes full width */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+.table th, .table td {
+    padding: 12px; /* Add padding inside table cells */
+    border: 1px solid #ddd; /* Add border to table cells */
+    text-align: center; /* Center align text */
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px; /* Reduce margin on smaller screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+    
+    .form-group {
+        margin-bottom: 10px; /* Reduce space between form groups */
+    }
+    
+    .table th, .table td {
+        padding: 8px; /* Reduce padding in table cells */
+    }
+}

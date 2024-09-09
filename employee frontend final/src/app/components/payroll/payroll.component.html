@@ -1,0 +1,58 @@
+<!-- src/app/components/payroll/payroll.component.html -->
+
+<div class="container">
+    <h2>Calculate Employee Payroll</h2>
+  
+    <form #payrollForm="ngForm" (ngSubmit)="onSubmit(payrollForm)">
+      <div class="form-group">
+        <label for="employeeId">Employee ID</label>
+        <input type="number" id="employeeId" name="employeeId" class="form-control" ngModel required>
+      </div>
+  
+      <div class="form-group">
+        <label for="baseSalary">Base Salary</label>
+        <input type="number" id="baseSalary" name="baseSalary" class="form-control" ngModel required>
+      </div>
+  
+      <div class="form-group">
+        <label for="bonuses">Bonuses</label>
+        <input type="number" id="bonuses" name="bonuses" class="form-control" ngModel required>
+      </div>
+  
+      <div class="form-group">
+        <label for="deductions">Deductions</label>
+        <input type="number" id="deductions" name="deductions" class="form-control" ngModel required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="payrollForm.invalid">Calculate Payroll</button>
+    </form>
+  
+    <hr>
+  
+    <div *ngIf="payrollDetails.length > 0" class="payroll-details">
+      <h3>Payroll Details</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Base Salary</th>
+            <th>Bonuses</th>
+            <th>Deductions</th>
+            <th>Net Salary</th>
+            <th>Payment Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let payroll of payrollDetails">
+            <td>{{ payroll.employee.id }}</td>
+            <td>{{ payroll.baseSalary }}</td>
+            <td>{{ payroll.bonuses }}</td>
+            <td>{{ payroll.deductions }}</td>
+            <td>{{ payroll.netSalary }}</td>
+            <td>{{ payroll.paymentDate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
